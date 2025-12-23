@@ -13,6 +13,11 @@ router.post("/subscribe", async (req, res) => {
     });
   }
 
+  res.status(200).json({
+    success: true,
+    message: "Subscription successful. Welcome to BlogVerse!",
+  });
+
   try {
     const transporter = nodemailer.createTransport({
       service: "gmail",
